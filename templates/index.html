@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" >
+    <title>Contador</title>
+</head>
+<body>
+    <h1 class="align-middle text-center mt-5" style="background-color: #eeee;">----Contador-----</h1>
+    <p class="align-middle text-center mt-3" style="color: red;">{{session['counter']}}</p>
+
+  
+    
+    <form action="/index+2" class="text-center">
+        <button class="btn btn-warning">Sumar dos sesiones</button>
+    </form>
+
+
+    <form action="/destroy_session" class="text-center">
+        <button class="btn btn-danger mt-2">Restaurar</button>
+        <div class="alert alert-primary" role="alert">
+            En este ejercicio contamos el numero de sesiones, Actual {{session['counter']}}
+          </div>
+    </form>
+     
+    
+    
+<script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+</body>
+</html>
